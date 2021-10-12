@@ -24,18 +24,19 @@
                 android:padding="7dp"
                 android:src="@drawable/cheese_slice"
                 android:id="@+id/cheese_slice_img"/>
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Test"
-                />
+                android:layout_gravity="center"
+                android:text="Test" />
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Test"
-                />
+                android:layout_gravity="center"
+                android:text="Test" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
