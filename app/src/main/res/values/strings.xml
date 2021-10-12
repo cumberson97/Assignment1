@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Assignment1</string>
+    <string name="app_name">Cake Store</string>
+    <string name="AddToCart">Add To Cart</string>
 </resources>
