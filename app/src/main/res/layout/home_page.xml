@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgound4"
+    android:background="@drawable/Background6"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -14,13 +14,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                >
+
+                android:layout_gravity="center">
+
                 <ImageView
                     android:id="@+id/cheese_slice_img"
                     android:layout_width="192dp"
@@ -28,41 +31,44 @@
                     android:layout_gravity="center"
                     android:background="@color/black"
                     android:cropToPadding="true"
-                    android:padding="0.5dp"
+                    android:padding="1dp"
                     android:src="@drawable/cheese_slice" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="17dp">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="First"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Second"/>
+                        android:text="First" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Third"/>
+                        android:text="Second" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Third" />
 
                 </RadioGroup>
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="First"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Second"/>
+                        android:text="First" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second" />
 
                 </RadioGroup>
             </LinearLayout>
@@ -75,48 +81,133 @@
                 android:text="@string/AddToCart" />
 
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="5dp">
+
                 <ImageView
                     android:id="@+id/choco_cake_full"
-                    android:layout_width="216dp"
-                    android:layout_height="160dp"
+                    android:layout_width="192dp"
+                    android:layout_height="130dp"
                     android:layout_gravity="center"
                     android:background="@color/black"
                     android:cropToPadding="true"
-                    android:padding="0.5dp"
+                    android:padding="1dp"
                     android:src="@drawable/choc_full" />
 
-                <Button
-                    android:id="@+id/choco_cake_full_add"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/AddToCart" />
+                    android:paddingRight="17dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Third" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second" />
+
+                </RadioGroup>
+
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/choco_cake_full_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/AddToCart" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="5dp">
+
                 <ImageView
                     android:id="@+id/sponge_full_img"
-                    android:layout_width="221dp"
-                    android:layout_height="145dp"
+                    android:layout_width="192dp"
+                    android:layout_height="130dp"
                     android:layout_gravity="center"
                     android:background="@color/black"
                     android:cropToPadding="true"
-                    android:padding="0.5dp"
+                    android:padding="1dp"
                     android:src="@drawable/sponge_full" />
 
-                <Button
-                    android:id="@+id/sponge_full_add"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/AddToCart" />
+                    android:paddingRight="17dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Third" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second" />
+
+                </RadioGroup>
+
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/sponge_full_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/AddToCart" />
 
         </LinearLayout>
     </ScrollView>
