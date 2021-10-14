@@ -16,6 +16,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -23,60 +24,74 @@
                 android:layout_marginVertical="10dp"
 
                 android:background="@drawable/bg_card"
+                android:orientation="vertical"
                 android:padding="5dp">
 
-                <ImageView
-                    android:id="@+id/cheese_slice_img"
-                    android:layout_width="192dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="center"
-                    android:background="@color/black"
-                    android:cropToPadding="true"
-                    android:padding="1dp"
-                    android:src="@drawable/cheese_slice" />
-
-                <RadioGroup
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="17dp">
+                    android:layout_gravity="center"
+                    android:text="Cheese Cake"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="First" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Second" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Third" />
-
-                </RadioGroup>
-
-                <RadioGroup
-                    android:id="@+id/sliceOrWhole"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/sliceCheese"
+                    <ImageView
+                        android:id="@+id/cheese_slice_img"
+                        android:layout_width="192dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black"
+                        android:cropToPadding="true"
+                        android:padding="1dp"
+                        android:src="@drawable/cheese_slice" />
+
+                    <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="switchPic"
-                        android:text="@string/slice" />
+                        android:paddingRight="17dp">
 
-                    <RadioButton
-                        android:id="@+id/wholeCheese"
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/sliceOrWhole"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="switchPic"
-                        android:text="@string/whole" />
+                        android:layout_height="wrap_content">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/sliceCheese"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/slice" />
+
+                        <RadioButton
+                            android:id="@+id/wholeCheese"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/whole" />
+
+                    </RadioGroup>
+                </LinearLayout>
             </LinearLayout>
 
             <Button
@@ -93,59 +108,74 @@
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/bg_card"
+                android:orientation="vertical"
                 android:padding="5dp">
 
-                <ImageView
-                    android:id="@+id/choco_cake_full"
-                    android:layout_width="192dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="center"
-                    android:background="@color/black"
-                    android:cropToPadding="true"
-                    android:padding="1dp"
-                    android:src="@drawable/choc_full" />
-
-                <RadioGroup
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="17dp">
+                    android:layout_gravity="center"
+                    android:text="Chocolate Cake"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="First" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Second" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Third" />
-
-                </RadioGroup>
-
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/chocoSlice"
+                    <ImageView
+                        android:id="@+id/choco_cake_full"
+                        android:layout_width="192dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black"
+                        android:cropToPadding="true"
+                        android:padding="1dp"
+                        android:src="@drawable/choc_full" />
+
+                    <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/slice" />
+                        android:paddingRight="17dp">
 
-                    <RadioButton
-                        android:id="@+id/chocoWhole"
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/whole" />
+                        android:layout_height="wrap_content">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/chocoSlice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/slice" />
 
+                        <RadioButton
+                            android:id="@+id/chocoWhole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/whole" />
 
+                    </RadioGroup>
+
+                </LinearLayout>
             </LinearLayout>
 
             <Button
@@ -161,59 +191,74 @@
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/bg_card"
+                android:orientation="vertical"
                 android:padding="5dp">
 
-                <ImageView
-                    android:id="@+id/sponge_full_img"
-                    android:layout_width="192dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="center"
-                    android:background="@color/black"
-                    android:cropToPadding="true"
-                    android:padding="1dp"
-                    android:src="@drawable/sponge_full" />
-
-                <RadioGroup
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="17dp">
+                    android:layout_gravity="center"
+                    android:text="Spoonge Cake"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="First" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Second" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Third" />
-
-                </RadioGroup>
-
-                <RadioGroup
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/spongeSlice"
+                    <ImageView
+                        android:id="@+id/sponge_full_img"
+                        android:layout_width="192dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black"
+                        android:cropToPadding="true"
+                        android:padding="1dp"
+                        android:src="@drawable/sponge_full" />
+
+                    <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/slice" />
+                        android:paddingRight="17dp">
 
-                    <RadioButton
-                        android:id="@+id/spongeWhole"
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/whole" />
+                        android:layout_height="wrap_content">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/spongeSlice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/slice" />
 
+                        <RadioButton
+                            android:id="@+id/spongeWhole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/whole" />
 
+                    </RadioGroup>
+
+                </LinearLayout>
             </LinearLayout>
 
             <Button
@@ -223,7 +268,174 @@
                 android:layout_gravity="center"
                 android:text="@string/AddToCart" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Carrot Cake"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/carrotCakeImg"
+                        android:layout_width="192dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black"
+                        android:cropToPadding="true"
+                        android:padding="1dp"
+                        android:src="@drawable/carrot_cake" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="17dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/carrotSlice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/slice" />
+
+                        <RadioButton
+                            android:id="@+id/carrotWhole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/whole" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/carrot_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/AddToCart" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Red Velvet Cake"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/redVelvet"
+                        android:layout_width="192dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:background="@color/black"
+                        android:cropToPadding="true"
+                        android:padding="1dp"
+                        android:src="@drawable/red_velvet" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="17dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Third" />
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/redVelSlice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/slice" />
+
+                        <RadioButton
+                            android:id="@+id/redVelWhole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="switchPic"
+                            android:text="@string/whole" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/redVelvet_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/AddToCart" />
+
         </LinearLayout>
+
     </ScrollView>
 
 
