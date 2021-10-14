@@ -7,12 +7,15 @@
         <entry key="..\:/UWI/COMP 3606/Assignment1/app/src/main/res/layout/home_page.xml" value="0.22" />
         <entry key="..\:/UWI/COMP 3606/Assignment1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1828125" />
         <entry key="..\:/Users/liat1/AndroidStudioProjects/Assignment1/app/src/main/res/layout/activity_main.xml" value="0.11388888888888889" />
+        <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4661458333333333" />
+        <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/drawable/bg_card.xml" value="0.4661458333333333" />
+        <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4661458333333333" />
         <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/layout/activity_main.xml" value="0.36820652173913043" />
-        <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/layout/home_page.xml" value="0.42857142857142855" />
+        <entry key="..\:/Users/liat1/Desktop/Peer Assignment/Assignment1/app/src/main/res/layout/home_page.xml" value="0.3828571428571429" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
