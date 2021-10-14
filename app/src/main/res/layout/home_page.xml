@@ -131,12 +131,14 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="First" />
+                        android:text="@string/slice"
+                        android:id="@+id/chocoSlice"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Second" />
+                        android:text="@string/whole"
+                        android:id="@+id/chocoWhole"/>
 
                 </RadioGroup>
 
@@ -197,12 +199,14 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="First" />
+                        android:text="@string/slice"
+                        android:id="@+id/spongeSlice"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Second" />
+                        android:text="@string/whole"
+                        android:id="@+id/spongeWhole"/>
 
                 </RadioGroup>
 
