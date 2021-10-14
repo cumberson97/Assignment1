@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10dp"
+
                 android:background="@drawable/bg_card"
                 android:padding="5dp">
 
@@ -65,12 +66,14 @@
                         android:id="@+id/sliceCheese"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="switchPic"
                         android:text="@string/slice" />
 
                     <RadioButton
                         android:id="@+id/wholeCheese"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:onClick="switchPic"
                         android:text="@string/whole" />
 
                 </RadioGroup>
@@ -129,16 +132,16 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/chocoSlice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/slice"
-                        android:id="@+id/chocoSlice"/>
+                        android:text="@string/slice" />
 
                     <RadioButton
+                        android:id="@+id/chocoWhole"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/whole"
-                        android:id="@+id/chocoWhole"/>
+                        android:text="@string/whole" />
 
                 </RadioGroup>
 
@@ -197,16 +200,16 @@
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/spongeSlice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/slice"
-                        android:id="@+id/spongeSlice"/>
+                        android:text="@string/slice" />
 
                     <RadioButton
+                        android:id="@+id/spongeWhole"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/whole"
-                        android:id="@+id/spongeWhole"/>
+                        android:text="@string/whole" />
 
                 </RadioGroup>
 
