@@ -37,20 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_go_to_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="View Cart"
-                android:onClick="goToCart"
-                android:layout_gravity="center"/>
-
-
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/black_logo_nobg"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -118,7 +113,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="switchPic"
-                            android:text="@string/slice" />
+                            android:text="@string/slice"
+                            android:checked="true"/>
 
                         <RadioButton
                             android:id="@+id/wholeCheese"
@@ -169,7 +165,7 @@
                         android:background="@color/black"
                         android:cropToPadding="true"
                         android:padding="1dp"
-                        android:src="@drawable/choc_full" />
+                        android:src="@drawable/choc_slice" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -204,7 +200,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="switchPic"
-                            android:text="@string/slice" />
+                            android:text="@string/slice"
+                            android:checked="true"/>
 
                         <RadioButton
                             android:id="@+id/chocoWhole"
@@ -239,7 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Spoonge Cake"
+                    android:text="Sponge Cake"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -255,7 +252,7 @@
                         android:background="@color/black"
                         android:cropToPadding="true"
                         android:padding="1dp"
-                        android:src="@drawable/sponge_full" />
+                        android:src="@drawable/sponge_slice" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -290,7 +287,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="switchPic"
-                            android:text="@string/slice" />
+                            android:text="@string/slice"
+                            android:checked="true"/>
 
                         <RadioButton
                             android:id="@+id/spongeWhole"
@@ -341,7 +339,7 @@
                         android:background="@color/black"
                         android:cropToPadding="true"
                         android:padding="1dp"
-                        android:src="@drawable/carrot_cake" />
+                        android:src="@drawable/carrot_cake_slice" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -376,7 +374,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="switchPic"
-                            android:text="@string/slice" />
+                            android:text="@string/slice"
+                            android:checked="true"/>
 
                         <RadioButton
                             android:id="@+id/carrotWhole"
@@ -427,7 +426,7 @@
                         android:background="@color/black"
                         android:cropToPadding="true"
                         android:padding="1dp"
-                        android:src="@drawable/red_velvet" />
+                        android:src="@drawable/red_velvet_slice" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -462,7 +461,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="switchPic"
-                            android:text="@string/slice" />
+                            android:text="@string/slice"
+                            android:checked="true"/>
 
                         <RadioButton
                             android:id="@+id/redVelWhole"

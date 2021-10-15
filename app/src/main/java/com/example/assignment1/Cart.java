@@ -10,11 +10,7 @@ public class Cart implements java.io.Serializable {
         numberOfItems = 0;
     }
 
-    public int noOfItems(){
-        return numberOfItems;
-    }
-
-    public void  addCake(Cake cake){
+    public void addCake(Cake cake){
         cakes.add(cake);
         numberOfItems++;
     }
@@ -31,4 +27,7 @@ public class Cart implements java.io.Serializable {
         return cakes;
     }
 
+    public int getNumberOfItems() {
+        return numberOfItems;
+    }
 }

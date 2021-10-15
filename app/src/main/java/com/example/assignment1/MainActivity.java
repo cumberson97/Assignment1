@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
     public void addToCart(View view) {
         int btn = view.getId();
 
-        /*Toast toast = Toast.makeText(this, Integer.toString(btn), Toast.LENGTH_SHORT);
-        toast.setMargin(50,50);
-        toast.show();*/
-
         TextView counter = findViewById(R.id.itemCounter);
         String text = counter.getText().toString();
         int count = Integer.parseInt(text);
