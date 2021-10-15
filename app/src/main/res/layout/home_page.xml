@@ -84,27 +84,29 @@
                         android:padding="1dp"
                         android:src="@drawable/cheese_slice" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="17dp">
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First" />
+                            android:text="Icing"
+                            android:id="@+id/cheeseIcingBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Caramel"
+                            android:id="@+id/cheeseCaramelBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third" />
-
-                    </RadioGroup>
+                            android:text="Sprinkles"
+                            android:id="@+id/cheeseSprinklesBox"/>
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/sliceOrWhole"
@@ -169,27 +171,29 @@
                         android:padding="1dp"
                         android:src="@drawable/choc_full" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="17dp">
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First" />
+                            android:text="Icing"
+                            android:id="@+id/chocolateIcingBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Caramel"
+                            android:id="@+id/chocolateCarmelBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third" />
-
-                    </RadioGroup>
+                            android:text="Sprinkles"
+                            android:id="@+id/chocolateSprinklesBox"/>
+                    </LinearLayout>
 
                     <RadioGroup
                         android:layout_width="wrap_content"
@@ -253,27 +257,29 @@
                         android:padding="1dp"
                         android:src="@drawable/sponge_full" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="17dp">
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First" />
+                            android:text="Icing"
+                            android:id="@+id/spongeIcingBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Caramel"
+                            android:id="@+id/spongeCaramelBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third" />
-
-                    </RadioGroup>
+                            android:text="Sprinkles"
+                            android:id="@+id/spongeSprinklesBox"/>
+                    </LinearLayout>
 
                     <RadioGroup
                         android:layout_width="wrap_content"
@@ -337,27 +343,29 @@
                         android:padding="1dp"
                         android:src="@drawable/carrot_cake" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="17dp">
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First" />
+                            android:text="Icing"
+                            android:id="@+id/carrotIcingBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Caramel"
+                            android:id="@+id/carrotCaramelBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third" />
-
-                    </RadioGroup>
+                            android:text="Sprinkles"
+                            android:id="@+id/carrotSprinklesBox"/>
+                    </LinearLayout>
 
                     <RadioGroup
                         android:layout_width="wrap_content"
@@ -421,27 +429,29 @@
                         android:padding="1dp"
                         android:src="@drawable/red_velvet" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="17dp">
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First" />
+                            android:text="Icing"
+                            android:id="@+id/redVelvetIcingBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Caramel"
+                            android:id="@+id/redVelvetCaramelBox"/>
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third" />
-
-                    </RadioGroup>
+                            android:text="Sprinkles"
+                            android:id="@+id/redVelvetSprinklesBox"/>
+                    </LinearLayout>
 
                     <RadioGroup
                         android:layout_width="wrap_content"

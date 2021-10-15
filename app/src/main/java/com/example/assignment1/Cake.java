@@ -1,17 +1,49 @@
 package com.example.assignment1;
 
 public class  Cake {
-    private String cakeType;
+    String cakeType;
     private boolean sliceOrWhole; //True for whole & False for slice
+    private boolean icing;
+    private boolean sprinkles;
+    private boolean caramel;
 
-    public Cake(String cakeType){
+    public Cake(String cakeType,boolean sliceOrWhole, boolean icing, boolean sprinkles, boolean caramel){
         this.cakeType = cakeType;
+        this.sliceOrWhole = sliceOrWhole;
+        this.icing = icing;
+        this.sprinkles = sprinkles;
+        this.caramel = caramel;
     }
 
-    boolean slice(){
-        return this.sliceOrWhole;
+    public boolean isSliceOrWhole() {
+        return sliceOrWhole;
     }
-    void setSliceOrWhole(boolean value){
-        this.sliceOrWhole = value;
+
+    public boolean isSprinkles() {
+        return sprinkles;
+    }
+
+    public boolean isIcing() {
+        return icing;
+    }
+
+    public boolean isCaramel() {
+        return caramel;
+    }
+
+    public void setSliceOrWhole(boolean sliceOrWhole) {
+        this.sliceOrWhole = sliceOrWhole;
+    }
+
+    public void setIcing(boolean icing) {
+        this.icing = icing;
+    }
+
+    public void setSprinkles(boolean sprinkles) {
+        this.sprinkles = sprinkles;
+    }
+
+    public void setCaramel(boolean caramel) {
+        this.caramel = caramel;
     }
 }

@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView cakePic;
-
     Intent intent;
+    Cake cake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
