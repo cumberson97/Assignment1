@@ -15,11 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageView cakePic;
     Intent intent;
     Cake cake;
-
     Cart cart = new Cart();
+    private ImageView cakePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addToCart(View view) {
         int btn = view.getId();
-        boolean sliceOrWhole=false, icing=false, sprinkles=false, caramel=false;
+        boolean sliceOrWhole = false, icing = false, sprinkles = false, caramel = false;
         CheckBox checker;
         RadioButton rChecker;
         TextView counter = findViewById(R.id.itemCounter);
@@ -44,41 +43,121 @@ public class MainActivity extends AppCompatActivity {
         count++;
         counter.setText((count + ""));
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.cheeseCakeAdd:
                 checker = (CheckBox) findViewById(R.id.cheeseIcingBox);
-                if(checker.isChecked()){
-                    icing=true;
+                if (checker.isChecked()) {
+                    icing = true;
                 }
                 checker = (CheckBox) findViewById(R.id.cheeseCaramelBox);
-                if(checker.isChecked()){
-                    caramel=true;
+                if (checker.isChecked()) {
+                    caramel = true;
                 }
                 checker = (CheckBox) findViewById(R.id.cheeseSprinklesBox);
-                if(checker.isChecked()){
-                    sprinkles=true;
+                if (checker.isChecked()) {
+                    sprinkles = true;
                 }
                 rChecker = (RadioButton) findViewById(R.id.sliceCheese);
-                if(rChecker.isChecked()){
-                    sliceOrWhole=true;
-                }else{
-                    sliceOrWhole=false;
+                if (rChecker.isChecked()) {
+                    sliceOrWhole = true;
+                } else {
+                    sliceOrWhole = false;
                 }
                 cake = new Cake("Cheese Cake", sliceOrWhole, icing, sprinkles, caramel);
                 cart.addCake(cake);
                 Toast.makeText(this, "Cheese Cake added", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.chocoCakeAdd:
-                Toast.makeText(this, "Chocolate", Toast.LENGTH_SHORT).show();
+                checker = (CheckBox) findViewById(R.id.chocolateIcingBox);
+                if (checker.isChecked()) {
+                    icing = true;
+                }
+                checker = (CheckBox) findViewById(R.id.chocolateCarmelBox);
+                if (checker.isChecked()) {
+                    caramel = true;
+                }
+                checker = (CheckBox) findViewById(R.id.chocolateSprinklesBox);
+                if (checker.isChecked()) {
+                    sprinkles = true;
+                }
+                rChecker = (RadioButton) findViewById(R.id.chocoSlice);
+                if (rChecker.isChecked()) {
+                    sliceOrWhole = true;
+                } else {
+                    sliceOrWhole = false;
+                }
+                cake = new Cake("Chocolate Cake", sliceOrWhole, icing, sprinkles, caramel);
+                cart.addCake(cake);
+                Toast.makeText(this, "Chocolate Cake added", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.spongeCakeAdd:
-                Toast.makeText(this, "Sponge", Toast.LENGTH_SHORT).show();
+                checker = (CheckBox) findViewById(R.id.spongeIcingBox);
+                if(checker.isChecked()){
+                    icing=true;
+                }
+                checker = (CheckBox) findViewById(R.id.spongeCaramelBox);
+                if(checker.isChecked()){
+                    caramel=true;
+                }
+                checker = (CheckBox) findViewById(R.id.spongeSprinklesBox);
+                if(checker.isChecked()){
+                    sprinkles=true;
+                }
+                rChecker = (RadioButton) findViewById(R.id.spongeSlice);
+                if(rChecker.isChecked()){
+                    sliceOrWhole=true;
+                }else{
+                    sliceOrWhole=false;
+                }
+                cake = new Cake("Sponge Cake", sliceOrWhole, icing, sprinkles, caramel);
+                cart.addCake(cake);
+                Toast.makeText(this, "Sponge Cake added", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.carrotCakeAdd:
-                Toast.makeText(this, "Carrot", Toast.LENGTH_SHORT).show();
+                checker = (CheckBox) findViewById(R.id.carrotIcingBox);
+                if(checker.isChecked()){
+                    icing=true;
+                }
+                checker = (CheckBox) findViewById(R.id.carrotCaramelBox);
+                if(checker.isChecked()){
+                    caramel=true;
+                }
+                checker = (CheckBox) findViewById(R.id.carrotSprinklesBox);
+                if(checker.isChecked()){
+                    sprinkles=true;
+                }
+                rChecker = (RadioButton) findViewById(R.id.carrotSlice);
+                if(rChecker.isChecked()){
+                    sliceOrWhole=true;
+                }else{
+                    sliceOrWhole=false;
+                }
+                cake = new Cake("Carrot Cake", sliceOrWhole, icing, sprinkles, caramel);
+                cart.addCake(cake);
+                Toast.makeText(this, "Carrot Cake added", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.redVelvetAdd:
-                Toast.makeText(this, "Red Velvet", Toast.LENGTH_SHORT).show();
+                checker = (CheckBox) findViewById(R.id.redVelvetIcingBox);
+                if(checker.isChecked()){
+                    icing=true;
+                }
+                checker = (CheckBox) findViewById(R.id.redVelvetCaramelBox);
+                if(checker.isChecked()){
+                    caramel=true;
+                }
+                checker = (CheckBox) findViewById(R.id.redVelvetSprinklesBox);
+                if(checker.isChecked()){
+                    sprinkles=true;
+                }
+                rChecker = (RadioButton) findViewById(R.id.redVelSlice);
+                if(rChecker.isChecked()){
+                    sliceOrWhole=true;
+                }else{
+                    sliceOrWhole=false;
+                }
+                cake = new Cake("Red Velvet Cake", sliceOrWhole, icing, sprinkles, caramel);
+                cart.addCake(cake);
+                Toast.makeText(this, "Red Velvel Cake added", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
