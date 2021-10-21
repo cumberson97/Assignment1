@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addToCart(View view) {
-        int btn = view.getId();
         boolean sliceOrWhole = false, icing = false, sprinkles = false, caramel = false;
         CheckBox checker;
         RadioButton rChecker;
