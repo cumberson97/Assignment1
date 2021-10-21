@@ -1,7 +1,8 @@
 package com.example.assignment1;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cart implements java.io.Serializable {
+public class Cart implements Serializable {
     private ArrayList<Cake> cakes;
     private int numberOfItems;
 
@@ -29,5 +30,39 @@ public class Cart implements java.io.Serializable {
 
     public int getNumberOfItems() {
         return numberOfItems;
+    }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "cakes=" + cakes +
+                ", numberOfItems=" + numberOfItems +
+                '}';
+    }
+
+    public String listCakes(){
+        String allCakes = "";
+
+        for(Cake x : cakes){
+            allCakes+=x.getCakeType() + "\t\t";
+            if(x.isSliceOrWhole()){
+                allCakes+="Sliced\t\t";
+            }
+            else{
+                allCakes+="Whole\t\t";
+            }
+            if(x.isIcing()){
+                allCakes+="Icing\t\t";
+            }
+            if(x.isCaramel()){
+                allCakes+="Caramel\t\t";
+            }
+            if(x.isSprinkles()){
+                allCakes+="Sprinkles\t\t";
+            }
+            allCakes+="\n\n";
+        }
+
+        return allCakes;
     }
 }

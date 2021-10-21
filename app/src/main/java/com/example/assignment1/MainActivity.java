@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Intent intent;
     Cake cake;
 
+    Cart cart = new Cart();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToCart(View view) {
         intent = new Intent(MainActivity.this, ShoppingCart.class);
+        intent.putExtra("Cake List", cart);
         startActivity(intent);
     }
 
     public void addToCart(View view) {
         int btn = view.getId();
-
+        boolean sliceOrWhole=false, icing=false, sprinkles=false, caramel=false;
+        CheckBox checker;
+        RadioButton rChecker;
         TextView counter = findViewById(R.id.itemCounter);
         String text = counter.getText().toString();
         int count = Integer.parseInt(text);
@@ -40,7 +46,27 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.cheeseCakeAdd:
-                Toast.makeText(this, "cheese", Toast.LENGTH_SHORT).show();
+                checker = (CheckBox) findViewById(R.id.cheeseIcingBox);
+                if(checker.isChecked()){
+                    icing=true;
+                }
+                checker = (CheckBox) findViewById(R.id.cheeseCaramelBox);
+                if(checker.isChecked()){
+                    caramel=true;
+                }
+                checker = (CheckBox) findViewById(R.id.cheeseSprinklesBox);
+                if(checker.isChecked()){
+                    sprinkles=true;
+                }
+                rChecker = (RadioButton) findViewById(R.id.sliceCheese);
+                if(rChecker.isChecked()){
+                    sliceOrWhole=true;
+                }else{
+                    sliceOrWhole=false;
+                }
+                cake = new Cake("Cheese Cake", sliceOrWhole, icing, sprinkles, caramel);
+                cart.addCake(cake);
+                Toast.makeText(this, "Cheese Cake added", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.chocoCakeAdd:
                 Toast.makeText(this, "Chocolate", Toast.LENGTH_SHORT).show();

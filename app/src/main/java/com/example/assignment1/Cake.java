@@ -1,6 +1,8 @@
 package com.example.assignment1;
 
-public class  Cake {
+import java.io.Serializable;
+
+public class  Cake implements Serializable {
     String cakeType;
     private boolean sliceOrWhole; //True for whole & False for slice
     private boolean icing;
@@ -14,6 +16,7 @@ public class  Cake {
         this.sprinkles = sprinkles;
         this.caramel = caramel;
     }
+
 
     public boolean isSliceOrWhole() {
         return sliceOrWhole;
@@ -45,5 +48,9 @@ public class  Cake {
 
     public void setCaramel(boolean caramel) {
         this.caramel = caramel;
+    }
+
+    public String getCakeType() {
+        return cakeType;
     }
 }
