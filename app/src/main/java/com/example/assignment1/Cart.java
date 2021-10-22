@@ -16,6 +16,15 @@ public class Cart implements Serializable {
         numberOfItems++;
     }
 
+    public boolean isEmpty(){
+        if(cakes.isEmpty()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void deleteCake(Cake cake){
         cakes.remove(cake);
     }

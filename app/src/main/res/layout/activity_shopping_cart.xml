@@ -57,6 +57,21 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
+                android:id="@+id/orderHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="displayOrder"
+                android:text="Display Order" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oldOrders">
+
+            </TextView>
+
+            <Button
                 android:id="@+id/btn_go_to_shop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

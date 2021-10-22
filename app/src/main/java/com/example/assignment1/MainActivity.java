@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         RadioButton rChecker;
         TextView counter = findViewById(R.id.itemCounter);
 
-
         switch (view.getId()) {
             case R.id.cheeseCakeAdd:
                 checker = (CheckBox) findViewById(R.id.cheeseIcingBox);
