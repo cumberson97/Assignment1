@@ -54,6 +54,7 @@ public class ShoppingCart extends AppCompatActivity{
         cart.getCakes().clear();
         TextView textView = findViewById(R.id.textList);
         textView.setText("Your cart is empty!");
+        DataHandler.delete(this,"test.dat");
 
     }
 

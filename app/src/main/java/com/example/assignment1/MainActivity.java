@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
+        cart=DataHandler.readToFile(this,cart,"test.dat");
+        TextView counter = findViewById(R.id.itemCounter);
+        counter.setText((cart.getNumberOfItems() + ""));
     }
 
     public void goToCart(View view) {
@@ -37,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checker;
         RadioButton rChecker;
         TextView counter = findViewById(R.id.itemCounter);
-        String text = counter.getText().toString();
-        int count = Integer.parseInt(text);
-        count++;
-        counter.setText((count + ""));
+
 
         switch (view.getId()) {
             case R.id.cheeseCakeAdd:
@@ -159,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Red Velvel Cake added", Toast.LENGTH_SHORT).show();
                 break;
         }
+        counter.setText((cart.getNumberOfItems() + ""));
+        DataHandler.writeToFile(this,cart,"test.dat");
     }
 
     public void switchPic(View view) {
