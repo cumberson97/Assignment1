@@ -48,27 +48,26 @@ public class ShoppingCart extends AppCompatActivity {
 
     public void completeOrder(View view) {
         Button btn = findViewById(R.id.sendOrder);
-        btn.setVisibility(View.VISIBLE);
+
+        if (btn.getVisibility() == View.VISIBLE) {
+            btn.setVisibility(View.GONE);
+        } else {
+            btn.setVisibility(View.VISIBLE);
+        }
     }
 
     public void onClickWhatsApp(View view, Cart cart) {
 
-        PackageManager pm=getPackageManager();
+        PackageManager pm = getPackageManager();
         try {
-
             Intent waIntent = new Intent(Intent.ACTION_SEND);
             waIntent.setType("text/plain");
             String text = cart.listCakes();
-
-            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
-            //Check if package exists or not. If not then code
-            //in catch block will be called
             waIntent.setPackage("com.whatsapp");
-
             waIntent.putExtra(Intent.EXTRA_TEXT, text);
-            startActivity(Intent.createChooser(waIntent, "Share with"));
+            startActivity(waIntent);
 
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (Exception e) {
             Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT)
                     .show();
         }
@@ -76,10 +75,9 @@ public class ShoppingCart extends AppCompatActivity {
     }
 
     public void sendOrder(View view) {
-        if(cart.isEmpty()){
+        if (cart.isEmpty()) {
             Toast.makeText(this, "Cart Empty", Toast.LENGTH_SHORT).show();
-        }
-        else{
+        } else {
 
             onClickWhatsApp(view, cart);
 
@@ -96,24 +94,37 @@ public class ShoppingCart extends AppCompatActivity {
 
     public void displayOrder(View view) {
         oldCarts = DataHandler.readToFileAL(this, oldCarts, "oldCarts.dat");
-        String orders = "";
-        int count = 1;
-        for (Cart x : oldCarts){
-            orders+=count + "\n";
-            orders+=x.listCakes() + "\n\n";
-            count++;
+
+        if (oldCarts.isEmpty()) {
+            Toast.makeText(this, "There are no previous orders", Toast.LENGTH_SHORT).show();
+        } else {
+            String orders = "";
+            int count = 1;
+            for (Cart x : oldCarts) {
+                orders += count + "\n";
+                orders += x.listCakes() + "\n\n";
+                count++;
+            }
+            TextView textView = findViewById(R.id.oldOrders);
+            textView.setText(orders);
+            Button btn = findViewById(R.id.clearBtn);
+            if (btn.getVisibility() == View.VISIBLE) {
+                btn.setVisibility(View.GONE);
+                textView.setVisibility(View.GONE);
+            } else {
+                textView.setVisibility(View.VISIBLE);
+                btn.setVisibility(View.VISIBLE);
+            }
         }
-        TextView textView = findViewById(R.id.oldOrders);
-        textView.setText(orders);
-        Button btn = findViewById(R.id.clearBtn);
-        btn.setVisibility(View.VISIBLE);
     }
 
-    public void clearOrders(View view){
+    public void clearOrders(View view) {
         TextView textView = findViewById(R.id.oldOrders);
         textView.setText("No orders");
         DataHandler.delete(this, "oldCarts.dat");
         oldCarts.clear();
+        Button btn = findViewById(R.id.clearBtn);
+        btn.setVisibility(View.GONE);
     }
 
 }

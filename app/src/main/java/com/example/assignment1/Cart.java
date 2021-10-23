@@ -53,22 +53,29 @@ public class Cart implements Serializable {
         String allCakes = "";
 
         for(Cake x : cakes){
-            allCakes+=x.getCakeType() + "\t\t";
+            allCakes+=x.getCakeType() + ":\t\t";
             if(x.isSliceOrWhole()){
-                allCakes+="Sliced\t\t";
+                allCakes+="\nType: Sliced\t\t";
             }
             else{
-                allCakes+="Whole\t\t";
+                allCakes+="\nType: Whole\t\t";
             }
-            if(x.isIcing()){
-                allCakes+="Icing\t\t";
+            if(x.isIcing()||x.isSprinkles()|| x.isCaramel()){
+                allCakes+="\nToppings: ";
+                if(x.isIcing()){
+                    allCakes+="Icing\t\t";
+                }
+                if(x.isCaramel()){
+                    allCakes+="Caramel\t\t";
+                }
+                if(x.isSprinkles()){
+                    allCakes+="Sprinkles\t\t";
+                }
             }
-            if(x.isCaramel()){
-                allCakes+="Caramel\t\t";
+            else{
+                allCakes+="\nNo Toppings!";
             }
-            if(x.isSprinkles()){
-                allCakes+="Sprinkles\t\t";
-            }
+
             allCakes+="\n\n";
         }
 
