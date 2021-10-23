@@ -51,12 +51,37 @@ public class ShoppingCart extends AppCompatActivity {
         btn.setVisibility(View.VISIBLE);
     }
 
+    public void onClickWhatsApp(View view, Cart cart) {
+
+        PackageManager pm=getPackageManager();
+        try {
+
+            Intent waIntent = new Intent(Intent.ACTION_SEND);
+            waIntent.setType("text/plain");
+            String text = cart.listCakes();
+
+            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
+            //Check if package exists or not. If not then code
+            //in catch block will be called
+            waIntent.setPackage("com.whatsapp");
+
+            waIntent.putExtra(Intent.EXTRA_TEXT, text);
+            startActivity(Intent.createChooser(waIntent, "Share with"));
+
+        } catch (PackageManager.NameNotFoundException e) {
+            Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT)
+                    .show();
+        }
+
+    }
 
     public void sendOrder(View view) {
         if(cart.isEmpty()){
             Toast.makeText(this, "Cart Empty", Toast.LENGTH_SHORT).show();
         }
         else{
+
+            onClickWhatsApp(view, cart);
 
             Toast.makeText(this, "Order Sent", Toast.LENGTH_SHORT).show();
             oldCarts.add(cart);
@@ -80,6 +105,15 @@ public class ShoppingCart extends AppCompatActivity {
         }
         TextView textView = findViewById(R.id.oldOrders);
         textView.setText(orders);
+        Button btn = findViewById(R.id.clearBtn);
+        btn.setVisibility(View.VISIBLE);
+    }
+
+    public void clearOrders(View view){
+        TextView textView = findViewById(R.id.oldOrders);
+        textView.setText("No orders");
+        DataHandler.delete(this, "oldCarts.dat");
+        oldCarts.clear();
     }
 
 }
